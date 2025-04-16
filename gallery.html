@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVibe - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>EcoVibe - Contact</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <div class="dropdown">
+            <span>Gallery</span>
+            <div class="dropdown-content">
+                <a href="gallery.html#nature">Nature</a>
+                <a href="gallery.html#recycling">Recycling</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <span>More</span>
+            <div class="dropdown-content">
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to collaborate? Reach out to us!</p>
+        <div class="contact-form">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="topic">Select Topic:</label>
+                <select id="topic" name="topic">
+                    <option value="general">General Inquiry</option>
+                    <option value="volunteer">Volunteering</option>
+                    <option value="events">Events</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="success-message" id="successMessage">
+                Thank you! Your message has been successfully sent.
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 EcoVibe. All rights reserved. | Designed for a better planet 🌍
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.getElementById("successMessage").style.display = "block";
+            this.reset();
+        });
+    </script>
+</body>
+</html>
